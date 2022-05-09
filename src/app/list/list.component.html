@@ -1,21 +1,13 @@
-<h3 class="header"
-    [class.collapsable]="collapsable"
-    (click)="toggle()">
+
   <span>
     {{title}}
   </span>
-  <span>
-    <i *ngIf="collapsable"
-       [class.opened]="opened">
-    </i>
-  </span>
-</h3>
+ 
 
-<ul *ngIf="opened"
+
+<ul 
     @slide>
     <li> {{ master }}</li>
-  <li appItem
-      *ngFor="let item of items"
-      [item]="item">
+  <li appItem *ngFor="let item of items" [item]="item">
   </li>
 </ul>

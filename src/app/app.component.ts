@@ -11,7 +11,7 @@ export class AppComponent {
 
   public masterTag: string=""
   public titleMaster:string=""
-  public listTags: string[] = ["",""];
+  public listTags: string[] = [];
   changeMaster(event:any){
     this.masterTag=event.target.value
   }
@@ -21,14 +21,11 @@ export class AppComponent {
 
   addTag(){
     const tag = document.getElementById('tag') as HTMLInputElement
-    this.listTags.push(tag.value)
-    
+    this.listTags.push(tag.value) 
   }
 
   removeTags(){
     let index=this.listTags.length
     this.listTags.splice(index-1,1)
-    console.log(this.listTags)
-  
   }
 }

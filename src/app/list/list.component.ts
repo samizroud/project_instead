@@ -29,29 +29,9 @@ export class ListComponent implements OnInit {
   @Input()
   public items: string[] = [];
 
-  @Input()
-  public collapsable: boolean = false;
 
-  @Input()
-  public startOpened: boolean = true;
-
-  public get opened(): boolean {
-    return this._opened;
+ ngOnInit() {
+  
   }
 
-  private _opened: boolean = true;
-
-  public ngOnInit() {
-    if (this._opened !== this.startOpened) {
-      this.toggle();
-    }
-  }
-
-  public toggle(): void {
-    if (!this.collapsable) {
-      return;
-    }
-
-    this._opened = !this._opened;
-  }
 }
