@@ -1,4 +1,47 @@
 app-list {
   width: 100%;
   padding: 16px 0;
+  align-items: center;
+
 }
+.page-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+}
+.master{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+.tag{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+.views{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  max-width: 60%;
+
+  .viewsMaster {
+    background-color: cadetblue;
+    width: auto;
+   
+  }
+  .viewsTag {
+    background-color: chocolate;
+    width: auto;
+  
+  }
+}
+

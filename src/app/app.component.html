@@ -1,17 +1,20 @@
 <div class="content">
-  <h1>Tags</h1>
-
-  <img src="assets/tags.gif">
-
-  <h2>
-    The goal of this exercise is to reproduce the behaviour shown in this gif
-  </h2>
-
-  <app-list [header]="rulesTitle"
-            [items]="rules"></app-list>
-
-  <app-list [header]="instructionsTitle"
-            [items]="instructions"
-            [startOpened]="false"
-            [collapsable]="true"></app-list>
+  <div class="page-content">
+    <div class="views">
+    <app-list class="viewsMaster"  [items]="rules"></app-list> 
+      <app-list class="viewsTag"  [items]="instructions" [startOpened]="false"
+        [collapsable]="false"></app-list>
+    </div>
+    <div class="inputs">
+      <div class="master">
+        <input type="text" name="titleTag" id="titleTag">
+        <input type="text" name="masterTag" id="masterTag">
+      </div>
+      <div class="tag">
+        <input type="text" name="tag" id="tag">
+        <button>add tag</button>
+        <button>Remove last tag</button>
+      </div>
+    </div>
+  </div>
 </div>
