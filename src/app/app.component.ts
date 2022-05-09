@@ -18,4 +18,17 @@ export class AppComponent {
   changeTitle(event:any){
     this.titleMaster=event.target.value
   }
+
+  addTag(){
+    const tag = document.getElementById('tag') as HTMLInputElement
+    this.listTags.push(tag.value)
+    
+  }
+
+  removeTags(){
+    let index=this.listTags.length
+    this.listTags.splice(index-1,1)
+    console.log(this.listTags)
+  
+  }
 }
