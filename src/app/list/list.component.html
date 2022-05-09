@@ -2,7 +2,7 @@
     [class.collapsable]="collapsable"
     (click)="toggle()">
   <span>
-    {{ header }}
+    {{title}}
   </span>
   <span>
     <i *ngIf="collapsable"
@@ -13,6 +13,7 @@
 
 <ul *ngIf="opened"
     @slide>
+    <li> {{ master }}</li>
   <li appItem
       *ngFor="let item of items"
       [item]="item">

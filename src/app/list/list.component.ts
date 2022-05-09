@@ -5,9 +5,7 @@ import { slide } from './list.animation';
 /**
  * List item containing one or more lines
  */
-export interface ListItem {
-  lines: string[];
-}
+
 
 /**
  * Displays items as an unordered list
@@ -23,10 +21,13 @@ export interface ListItem {
 })
 export class ListComponent implements OnInit {
   @Input()
-  public header: string = '';
+  public master: string="" ;
 
   @Input()
-  public items: ListItem[] = [];
+  public title: string=""  ;
+
+  @Input()
+  public items: string[] = [];
 
   @Input()
   public collapsable: boolean = false;

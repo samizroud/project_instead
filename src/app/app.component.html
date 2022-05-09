@@ -1,14 +1,15 @@
 <div class="content">
   <div class="page-content">
     <div class="views">
-    <app-list class="viewsMaster"  [items]="rules"></app-list> 
-      <app-list class="viewsTag"  [items]="instructions" [startOpened]="false"
+      <app-list class="viewsMaster" [title]="titleMaster" [startOpened]="false"
+      [collapsable]="false"></app-list>
+      <app-list class="viewsTag" [master]="masterTag" [startOpened]="false"
         [collapsable]="false"></app-list>
     </div>
     <div class="inputs">
       <div class="master">
-        <input type="text" name="titleTag" id="titleTag">
-        <input type="text" name="masterTag" id="masterTag">
+        <input type="text" name="titleTag" id="titleTag" (keyup)="changeTitle($event)">
+        <input type="text" name="masterTag" id="masterTag" (keyup)="changeMaster($event)">
       </div>
       <div class="tag">
         <input type="text" name="tag" id="tag">

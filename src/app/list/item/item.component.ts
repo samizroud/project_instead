@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
-import { ListItem } from '../list.component';
+
 
 /**
  * Display ListItem lines as:
@@ -16,5 +16,5 @@ import { ListItem } from '../list.component';
 })
 export class ItemComponent {
   @Input()
-  public item: ListItem | null = null;
+  public item: string | null = null;
 }
